@@ -1,0 +1,27 @@
+<h1>Корзина</h1>
+
+{{#if courses.length}}
+<table>
+    <thead>
+        <tr>
+            <th>name</th>
+             <th>count</th>
+             <th>deistviya</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each courses}}
+        <tr>
+            <td>{{title}}</td>
+            <td>{{count}}</td>
+            <td>
+                <button class="btn btn-small">del</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<p><strong>price:</strong> <span class="price">{{price}}</span></p>
+{{else}}
+<p>not found</p>
+{{/if}}
